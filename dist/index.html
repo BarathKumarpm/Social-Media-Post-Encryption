@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Encryption and Decryption</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="C:\Users\pmbar\Downloads\image-encryption-and-decryption\image-encryption-and-decryption\images\instagram.jpg" alt="">
+      <h1>Instagram</h1>
+    </div>
+    <div class="navbar-menu">
+      <ul>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Messages</a>
+        <a href="#">Notifications</a>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h4>Bob</h4>
+      <input type="file" id="image" onchange="previewImage()">
+      <img id="preview" style="display:none;">
+      <div class="social-buttons">
+        <button class="like-btn">Like</button>
+        <button class="share-btn">Share</button>
+      </div>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password"><br>
+      <button onclick="encryptImage()">Encrypt</button>
+      <button onclick="decryptImage()">Decrypt</button><br>
+      <img id="encrypted-image" style="display:none;">
+      <a id="encrypted-link" download="encrypted.png" style="display:none;">Download encrypted image</a><br>
+      <img id="decrypted-image" style="display:none;">
+      <a id="decrypted-link" download="decrypted.png" style="display:none;">Download decrypted image</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
+

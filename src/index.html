@@ -1,0 +1,15 @@
+<h1>Image Encryption</h1>
+    <h2>Select an image file and enter a password to encrypt and decrypt the image.</h2>
+    <input type="file" id="image" onchange="previewImage()"><br>
+    <img id="preview" style="display:none; max-width:300px;"><br>
+    Password: <input type="password" id="password"><br>
+    <button onclick="encryptImage()">Encrypt</button>
+    <button onclick="decryptImage()">Decrypt</button><br>
+    <img id="encrypted-image" style="display:none; max-width:300px;">
+    <a id="encrypted-link" download="encrypted.png" style="display:none;">Download encrypted image</a><br>
+    <img id="decrypted-image" style="display:none; max-width:300px;">
+    <a id="decrypted-link" download="decrypted.png" style="display:none;">Download decrypted image</a>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+   
