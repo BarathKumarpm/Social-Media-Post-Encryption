@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="C:\Users\pmbar\Downloads\Social-Media-Post-Encryption-main\Social-Media-Post-Encryption-main\images\insta.png" type="image/x-icon">
+  <title>Image Encryption</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Phone Notch -->
+    <div class="notch-container">
+      <div class="notch"></div>
+    </div>
+    <div class="header">
+      <img src="C:\Users\pmbar\Downloads\Social-Media-Post-Encryption-main\Social-Media-Post-Encryption-main\images\instagram.jpg" alt="" class="logo">
+      <h1 class="instagram-title">Instagram</h1>
+    </div>
+    <div class="content">
+      <h4>Post</h4>
+      <input type="file" id="image" onchange="previewImage()">
+      <img id="preview" style="display:none;">
+      <div class="social-buttons">
+        <button class="like-btn">Like</button>
+        <button class="share-btn">Share</button>
+      </div>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password"><br>
+      <button onclick="encryptImage()">Encrypt</button>
+      <img id="encrypted-image" style="display:none;">
+      <button class="download-button" id="encrypted-link" download="encrypted.png" style="display:none;">Download encrypted image</button><br>
+      <img id="decrypted-image" style="display:none;">
+      <a id="decrypted-link" download="decrypted.png" style="display:none;">Download decrypted image</a>
+    </div>
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+      <a href="#" class="active">〇</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
